@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random List</title>
+</head>
+<body>
+
+    <h1>List of Random Numbers </h1>
+    <br>
+
+    <ul th:if="${#numbers.size()>0}">
+        <li th:each="no : $(numbers)">
+            <span th:text="${no}"></span>
+        </li>
+    </ul>
+
+    <h3 th:unless="${#numbers.size()>0}">You did not input a number</h3>
+
+    <a href="/random">Generate more random numbers</a>
+
+    
+</body>
+</html>

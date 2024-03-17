@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator</title>
+</head>
+
+<body>
+    <h1>List of numbers</h1>
+    <tr th:each="i: ${numbers}">
+        <ul>
+            <li th:text="${i}"></li>
+        </ul>
+    </tr>
+
+    <h1>Generate a list of numbers</h1>
+    <br>
+    <form action="/random" method="post">
+        Number: <input type="number" name="n">
+        <br>
+        <button type="submit">Add product</button>
+    </form>
+</body>
+</html>
